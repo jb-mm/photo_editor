@@ -1,0 +1,17 @@
+body {
+    font-size: 0.875rem;
+    background-color: #FFD700;
+}
+.navbar {
+    border-bottom: 1px solid #dfdfdf;
+}
+.btn-rounded {
+	border-radius: 25px;
+}
+p {
+    margin-bottom: 0;
+}
+.page-link.active {
+    background-color: blue;
+    color: #fff;
+}
