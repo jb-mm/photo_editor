@@ -72,8 +72,8 @@ class Welcome extends My_Controller {
 
 	public function image_public() {
 		$uuid = $this->uri->segment(2);
-		$get_name = $_GET['name'] ?? NULL;
-		$get_key = $_GET['key'] ?? NULL;
+		$get_name = $_GET['name'] ? $_GET['name'] : NULL;
+		$get_key = $_GET['passcode'] ? $_GET['passcode'] : NULL;
 
 		if (!$get_name || !$get_key) {
 			// $this->session->set_flashdata('auth_msg', 'You did not set name or passcode!');
@@ -89,5 +89,28 @@ class Welcome extends My_Controller {
 			'key_id' => $get_key
 		];
 		$this->load->view('templates/index', $default);
+	}
+
+	public function profile() {
+		$this->__just_click();
+		$default = [
+			'content' => 'pages/profile',
+		];
+
+		$this->load->view('templates/index', $default);
+	}
+
+	public function update_profile() {
+		$this->__not_logged_in();
+		$this->__just_click();
+		$password = $this->input->post('password', TRUE);
+		$confirm_password = $this->input->post('confirm_password', TRUE);
+		if ($password == $confirm_password) {
+			$this->db->update('users', ['password' => password_hash($password, PASSWORD_DEFAULT, [24])], ['id' => $this->session->userdata('id')]);
+			$this->session->set_flashdata('suc_msg', 'Password is successfully changed.');
+		} else {
+			$this->session->set_flashdata('err_msg', 'Password Confirmation does not match.');
+		}
+		redirect('profile');
 	}
 }

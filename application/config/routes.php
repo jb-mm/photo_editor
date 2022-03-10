@@ -13,6 +13,8 @@ $route['images/(:any)'] = 'welcome/image_public';
 $route['login']['get'] = 'welcome/index';
 $route['login']['post'] = 'welcome/login_action';
 $route['logout'] = 'welcome/logout_action';
+$route['profile'] = 'welcome/profile';
+$route['update_profile'] = 'welcome/update_profile';
 
 $route['upload']['post'] = 'image/image_store';
 $route['upload/(:any)']['get'] = 'image/image_edit';

@@ -23,11 +23,17 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						
 					</ul>
-					<div class="d-flex">
-						<ul class="navbar-nav mb-2 mb-lg-0">
-							<a class="nav-link" href="logout" title="Click to logout"><?= $this->session->userdata('name'); ?></a>
-						</ul>
-					</div>
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item dropdown dropstart">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<?= $this->session->userdata('name'); ?>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+								<li><a class="dropdown-item" href="profile" target="_blank">Profile</a></li>
+								<li><a class="dropdown-item" href="logout">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 				<?php else: ?>
 				<a class="navbar-brand" href="" onClick="return false"><?= title(); ?></a>
@@ -39,23 +45,6 @@
 		
 		<script src="assets/js/jquery-3.5.1.slim.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
-		<script>
-			(function() {
-				'use strict';
-				// pagination css
-				if (!$(".page-item").hasClass("page-link")) {
-					$(".page-item a").addClass("page-link")
-				}
-			})()
-
-			function copyTo(name) {
-				var copyText = document.getElementById(name)
-				// console.log(copyText.value)
-				copyText.select()
-				copyText.setSelectionRange(0, 99999) /* For mobile devices */
-				navigator.clipboard.writeText(copyText.value)
-				// alert(copyText.value)
-			}
-		</script>
+		<script src="assets/js/myjs.js"></script>
 	</body>
 </html>

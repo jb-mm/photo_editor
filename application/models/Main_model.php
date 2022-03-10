@@ -68,6 +68,6 @@ class Main_model extends CI_Model {
 		// $total /= pow(1024, $pow);
 		$total /= (1 << (10 * $pow)); 
 
-		return round($total, 3).' '.$units[$pow]." of 100 GB";
+		return round($total, 3).' '.$units[$pow]." of 50 GB";
 	}
 }

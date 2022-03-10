@@ -21,8 +21,8 @@
                         <input type="text" name="name" id="name" value="<?= $name_id; ?>" class="form-control" placeholder="Your Name .." required>
                     </div>
                     <div class="form-group mb-2">
-                        <label for="key">Passcode</label>
-                        <input type="text" name="key" id="key" value="<?= $key_id; ?>" class="form-control" placeholder="Your Passcode .." required>
+                        <label for="passcode">Passcode</label>
+                        <input type="text" name="passcode" id="passcode" value="<?= $key_id; ?>" class="form-control" placeholder="Your Passcode .." required>
                     </div>
                     <div class="row justify-content-center">
                         <button type="submit" class="col-4 btn btn-success">Enter</button>
