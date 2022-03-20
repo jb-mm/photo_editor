@@ -13,6 +13,29 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <?php endif; ?>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <dl class="row text-start">
+                    <!-- <dt class="col-2 text-end">
+                        
+                    </dt> -->
+                    <dd class="col-12">
+                        <h5>Instant Verification</h5>
+                        <p>Now we provide instant verification service for all-in-one certificate information. Your verification result will be appeared below on the page. You can refer this page for your requesting company or insitiution. <span class="text-danger">We inform that we are not going to send verification reuslt to your email instantly and if you need email verification result, you can use COC/COP verification scheme or contact ..</span> <span class="text-primary">myatdesign.com</span></p>
+                    </dd>
+                </dl>
+                <dl class="row text-start">
+                    <!-- <dt class="col-2 text-end">
+                        
+                    </dt> -->
+                    <dd class="col-12">
+                        <h5>Verification through QR code for Authenticity</h5>
+                        <p>You can get verification result of particular seafarer by scanning QR code shown in profile page of All-In-One certificate booklet.</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <form action="<?= "images/$uuid"; ?>" method="GET">
